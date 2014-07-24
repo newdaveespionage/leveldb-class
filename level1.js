@@ -9,10 +9,15 @@ var level = leveldb(storeloc);
 
 var resArr = [];
 
-var outputVals = function(element, index, array){
+var outputVals = function(index, element){
 		console.log('key'+index + '=' + element);
-	},
-	storeVals = function(err, value){
+	};
+
+var curridx = 0;
+
+for (var i = 0; i <= 100; i++) !function(i){
+	var curridx = i;
+	resArr[i] = level.get('key'+i,function(err, value){
 
 		if (err) {
 		    if (err.notFound) {
@@ -23,12 +28,9 @@ var outputVals = function(element, index, array){
 		    return callback(err)
 	  	}
 
-	  	console.log(value);
+	  	outputVals(curridx,value)
 
-	}
-
-for (var i = 0; i <= 100; i++) {
-	resArr[i] = level.get('key'+i,storeVals);
-};
+	});
+}(i);
 
 // resArr.forEach(outputVals);
