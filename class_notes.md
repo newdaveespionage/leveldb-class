@@ -28,6 +28,28 @@ Implementations
 Hyperdex 
 - is faster than Cassandra and MongoDB
 
+MongoDB has iterator/index issues
+
+Why:
+----
+- Data persistence can be separated out from monolithic db server structure
+- Highly configurable/composable
+- Minimal moving parts
+- Integrate at low level
+- Ease of integration
+- Easier to replicate than commercial SQL solutions
+- Super happy fun node api capacity woo
+
+How:
+----
+- work through levelmeup
+
+Structure:
+----------
+- uses bloom filters to identify interesting data
+- https://www.jasondavies.com/bloomfilter/
+- lookup time is o (log) n
+
 
 Methods:
 --------
