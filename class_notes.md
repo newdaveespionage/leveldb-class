@@ -3,9 +3,26 @@ LevelDB Notes
 
 Overview:
 ---------
-Key/Value store
-Inline compression/packing
-Embeddable
+- Key/Value store
+- Key prefixes
+- Inline compression/packing
+- Embeddable
+
+Performance:
+------------
+Implementations
+  - Facebook 
+  	- already pushed upstream to Google
+  	- fixes issues running on mac
+  - Google (origin)
+  - Hyperdex
+  	- optimized
+  	- actively maintained? 
+
+Hyperdex 
+- is faster than Cassandra and MongoDB
+
+
 
 Methods:
 --------
