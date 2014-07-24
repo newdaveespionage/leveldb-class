@@ -1,22 +1,21 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// client.js
-var engine = require('engine.io-stream');
+var engine = require('engine.io-stream')
 var split = require('split');
 var parse = require('through-parse');
 var domready = require('domready');
 
-// attach to stream
-var stream = engine('/server');
+// attach to an engine.io server at url '/numbers'
+var stream = engine('/server')
 
 domready(function() {
 
     var input = document.querySelector('input');
-    input.addEventListener('change', function(value) {
+    input.addEventListener('keyup', function() {
         stream.write(JSON.stringify({
             key: 'input',
             value: input.value
         }) + '\n');
-    })
+    });
 
     stream
         .pipe(split())

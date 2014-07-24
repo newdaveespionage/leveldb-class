@@ -1,21 +1,20 @@
-// client.js
-var engine = require('engine.io-stream');
+var engine = require('engine.io-stream')
 var split = require('split');
 var parse = require('through-parse');
 var domready = require('domready');
 
-// attach to stream
-var stream = engine('/server');
+// attach to an engine.io server at url '/numbers'
+var stream = engine('/server')
 
 domready(function() {
 
     var input = document.querySelector('input');
-    input.addEventListener('change', function(value) {
+    input.addEventListener('keyup', function() {
         stream.write(JSON.stringify({
             key: 'input',
             value: input.value
         }) + '\n');
-    })
+    });
 
     stream
         .pipe(split())

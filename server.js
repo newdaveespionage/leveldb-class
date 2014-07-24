@@ -1,19 +1,19 @@
 var level = require('level');
 var Engine = require('engine.io-stream');
+var split = require('split');
+var parse = require('through-parse');
+var liveStream = require('level-live-stream');
 
 var http = require('http');
 var fs = require('fs');
 
-var split = require('split');
-var parse = require('through-parse');
-var livestream = require('level-live-stream');
-
 var db = level('./db', {
     valueEncoding: 'json'
 });
-livestream.install(db);
+var livestream = liveStream(db);
 
 var server = http.createServer(function(req, res) {
+
     if (req.url == '/bundle.js') {
         fs.createReadStream('./bundle.js').pipe(res);
     } else if (req.url == '/') {
