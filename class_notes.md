@@ -1,6 +1,12 @@
 LevelDB Notes
 =============
 
+Setup:
+------
+sudo npm i n -g
+sudo n 0.11.10
+sudo npm i levelmeup -g
+
 Overview:
 ---------
 - Key/Value store
@@ -21,7 +27,6 @@ Implementations
 
 Hyperdex 
 - is faster than Cassandra and MongoDB
-
 
 
 Methods:
