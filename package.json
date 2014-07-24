@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/newdaveespionage/leveldb-class",
   "devDependencies": {
-    "level": "^0.18.0"
+    "browserify": "^5.0.8",
+    "domready": "^1.0.5",
+    "engine.io-stream": "^0.4.3",
+    "level": "^0.18.0",
+    "level-live-stream": "^1.4.9",
+    "split": "^0.3.0",
+    "through-parse": "^0.1.0"
   }
 }
