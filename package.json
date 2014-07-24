@@ -1,27 +1,22 @@
 {
-  "description": "class notes and activities",
-    "name": "simple-level-site",
-    "version": "0.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/newdaveespionage/leveldb-class.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "level": "~0.18.0",
-        "engine.io-stream": "~0.4.3",
-        "through-parse": "~0.1.0",
-        "split": "~0.3.0",
-        "domready": "~1.0.5",
-        "level-live-stream": "~1.4.9"
-    },
-    "devDependencies": {
-        "browserify": "~5.0.8"
-    }
+  "name": "simple-level-site",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "level": "~0.18.0",
+    "engine.io-stream": "~0.4.3",
+    "through-parse": "~0.1.0",
+    "split": "~0.3.0",
+    "domready": "~1.0.5",
+    "level-live-stream": "~1.4.9"
+  },
+  "devDependencies": {
+    "browserify": "~5.0.8"
+  }
 }
