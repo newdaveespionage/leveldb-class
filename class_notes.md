@@ -3,10 +3,13 @@ LevelDB Notes
 
 Setup:
 ------
+
+```
 sudo npm i n -g
 sudo n 0.11.10
 sudo npm i levelmeup -g
 sudo npm i -g lev
+```
 
 Overview:
 ---------
